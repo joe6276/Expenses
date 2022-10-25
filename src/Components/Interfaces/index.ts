@@ -7,6 +7,7 @@
 
 export interface ExpenseComponentProp{
     expenses:ExpensesInterfaces[]
+    onSave:(expense:ExpensesInterfaces1)=>void
 }
 
 
@@ -17,4 +18,17 @@ export interface ExpenseItemProp{
 
 export interface ExpenseDateProp{
     date:Date
+}
+
+
+ export interface ExpensesInterfaces1{
+  id:number,
+  expensesTitle:string
+  expenseAmount:number
+  expenseDate:string
+}
+
+
+export interface ExpenseFormProp{
+    onSave:(expense:ExpensesInterfaces1)=>void
 }
