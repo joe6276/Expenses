@@ -32,3 +32,9 @@ export interface ExpenseDateProp{
 export interface ExpenseFormProp{
     onSave:(expense:ExpensesInterfaces1)=>void
 }
+
+
+export interface ExpennseFilterProp{
+    onFilter:(c:string)=> void
+    year:string
+}
