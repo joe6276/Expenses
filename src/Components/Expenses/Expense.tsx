@@ -1,5 +1,6 @@
 
 import { useState } from "react"
+import {  ExpenseChart } from "../ExpenseChart/ExpenseChart"
 import { ExpenseForm } from "../ExpenseForm/ExpenseForm"
 import { ExpenseItem } from "../ExpenseItem/ExpenseItem"
 import { ExpenseFilter } from "../ExpensesFilter/ExpenseFilter"
@@ -25,6 +26,7 @@ const filteredExpenses= expenses.filter(expenses=>{
   return (
   <>
   <ExpenseForm onSave={handleExpense}/>
+ <ExpenseChart expenses={filteredExpenses}/>
   <ExpenseFilter  onFilter={handleFilter} year={year}/>
     {
      filteredExpenses.map((expense)=>(
