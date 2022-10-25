@@ -8,19 +8,19 @@ const expenses:ExpensesInterfaces[]=[
     id:Math.floor(Math.random() * 1000),
     expensesTitle:'Books',
     expenseAmount:300,
-    expenseDate: new Date('2022-10-19')
+    expenseDate: new Date('2021-10-19')
   },
    {
     id:Math.floor(Math.random() * 1000),
     expensesTitle:'Shopping',
     expenseAmount:400,
-    expenseDate: new Date('2022-10-19')
+    expenseDate: new Date('2020-10-19')
   },
    {
     id:Math.floor(Math.random() * 1000),
     expensesTitle:'Food',
     expenseAmount:600,
-    expenseDate: new Date('2022-10-19')
+    expenseDate: new Date('2020-10-19')
   },
    {
     id:Math.floor(Math.random() * 1000),
@@ -34,10 +34,8 @@ function App() {
   const [expense, setExpenses]= useState<ExpensesInterfaces[]>(expenses)
   const addExpense =(expense:ExpensesInterfaces1)=>{
     setExpenses((prev:ExpensesInterfaces[])=>([...prev ,{...expense, expenseDate:new Date(expense.expenseDate)}]))
-    
   }
-  
-  
+
   return (
     <div className="App">
       <Expenses  expenses={expense} onSave={addExpense}/>

@@ -11,6 +11,10 @@ export interface ExpenseComponentProp{
 }
 
 
+export interface ExpenseChartProp{
+    expenses:ExpensesInterfaces[]
+}
+
 export interface ExpenseItemProp{
     expense:ExpensesInterfaces
 }
@@ -31,4 +35,21 @@ export interface ExpenseDateProp{
 
 export interface ExpenseFormProp{
     onSave:(expense:ExpensesInterfaces1)=>void
+}
+
+
+export interface ExpennseFilterProp{
+    onFilter:(c:string)=> void
+    year:string
+}
+
+export  interface DataWay{
+label:string
+value:number
+}
+export interface ChartBarProp{
+    maxValue:number
+    value:number
+    label:string
+
 }
