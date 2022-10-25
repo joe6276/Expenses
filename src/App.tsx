@@ -1,5 +1,6 @@
+import { useState } from "react";
 import { Expenses } from "./Components/Expenses/Expense";
-import { ExpensesInterfaces } from "./Components/Interfaces";
+import { ExpensesInterfaces, ExpensesInterfaces1 } from "./Components/Interfaces";
 
 
 const expenses:ExpensesInterfaces[]=[
@@ -29,9 +30,17 @@ const expenses:ExpensesInterfaces[]=[
   }
 ]
 function App() {
+
+  const [expense, setExpenses]= useState<ExpensesInterfaces[]>(expenses)
+  const addExpense =(expense:ExpensesInterfaces1)=>{
+    setExpenses((prev:ExpensesInterfaces[])=>([...prev ,{...expense, expenseDate:new Date(expense.expenseDate)}]))
+    
+  }
+  
+  
   return (
     <div className="App">
-      <Expenses  expenses={expenses}/>
+      <Expenses  expenses={expense} onSave={addExpense}/>
     </div>
   );
 }
