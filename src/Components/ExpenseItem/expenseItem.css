@@ -1,0 +1,11 @@
+.expense{
+    padding: 5px;
+  background-color: rgb(31, 31, 31);
+  margin: 2rem auto;
+  width: 50rem;
+  max-width: 95%;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
